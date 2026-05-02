@@ -17,6 +17,34 @@ def hasta_ekle():
             break
         print("Geçersiz TC NO! Lütfen 11 haneli geçerli bir TC giriniz.")
     
-    telefon = 
+    telefon = input("Telefon: ").strip()
+    dogum_tarihi = input("Doğum tarihi (YYYY-MM-DD, boş bırakabilirsiniz): ").strip()
+    result = database.hasta_kaydet(ad,soyad,tc_no,telefon,dogum_tarihi if dogum_tarihi else None)
+    if result:
+        print(F"\n Hasta başarıyla eklendi! (ID:{result})")
+    else:
+        print(F"\n Hata: Bu hasta adında TC NO zaten kayıtlı!")
+
+def hasta_menu():
+    while True:
+        utils.temizle()
+        print("\n" + "="*40)
+        print("        HASTA İŞLEMLERİ")
+        print("\n" + "="*40)
+        print(" 1 - Hasta Ekle")
+        print(" 2 - Hasta Listele")
+        print(" 3 - Hasta Ara")
+        print(" 4 - Hasta Güncelle")
+        print(" 5 - Hasta Sil")
+        print(" 0 - Ana Menüye dön")
+        print("\n" + "="*40)
+
+        secim = int(input("Seçimniz: "))
+        if secim == 1:
+            utils.temizle()
+            hasta_ekle()
+            utils.bekle()
+
+
 
         
