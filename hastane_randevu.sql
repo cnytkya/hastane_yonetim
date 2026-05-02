@@ -1,1 +1,1 @@
-UPDATE table_name SET ad = 'Name' WHERE id = 2;
+UPDATE hastalar SET soyad = 'Kaya' WHERE id = 1;
