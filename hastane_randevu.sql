@@ -1,0 +1,1 @@
+UPDATE table_name SET ad = 'Name' WHERE id = 2;
